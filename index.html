@@ -1,55 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Home</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
 
-<head>
-    <meta charset="utf-8">
-    <title>Home</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
+	<body>
+		<div class="container">
+			<header>
+				<img
+					src="./assets/images/su_banner.gif"
+					alt="Stripped umbrella gif"
+				/>
+				<nav id="main-nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="services.html">Services</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
 
-<body>
-    <div class="container">
+			<main
+				class="content"
+				style="
+					display: flex;
+					justify-content: center;
+					flex-direction: column;
+					align-items: left;
+				"
+			>
+				<a href="exo.php" style="color: red">Conversion exercise</a>
+				<a href="search.php" style="color: red">Search exercise</a>
+				<label class="switch">
+					<input type="checkbox" />
+					<span class="slider round"></span>
+				</label>
+				<h2>Welcome To Our Amazing Spa</h2>
+				<p>
+					Welcome to The Striped Umbrella — a full-service resort and
+					spa just steps from the Gulf of Mexico and ten miles east of
+					Crab Key, Florida. Come enjoy the best of both worlds, a
+					secluded sandy beach populated with beautiful birds, yet a
+					short drive down the road from world-class shopping,
+					restaurants, and entertainment. Bring a good book and leave
+					your laptop at the office. You won't want to go home.
+				</p>
+				<img src="./assets/images/pool.jpg" alt="Pool" />
+				<video
+					width="400px"
+					controls
+					poster="./assets/images/sea_spa_logo.jpg"
+				>
+					<source
+						src="./assets/media/t-4fdF1ikgJUxFaW56nULzxbEYLqNHb8QH.mp4"
+						type="video/mp4"
+					/>
+					Sorry, this video is unavailable on your browser
+				</video>
+			</main>
 
-        <header>
-            <img src="./assets/images/su_banner.gif" alt="Stripped umbrella gif">
-            <nav id="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <main class="content">
-            <a href="exo.php" style="color: red;">Conversion exercise</a>
-            <label class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label>
-            <h2> Welcome To Our Amazing Spa </h2>
-            <p> Welcome to The Striped Umbrella — a full-service resort and spa just steps from the Gulf of Mexico
-                and
-                ten miles east
-                of Crab Key, Florida. Come enjoy the best of both worlds, a secluded sandy beach populated with
-                beautiful birds, yet a
-                short drive down the road from world-class shopping, restaurants, and entertainment. Bring a good
-                book
-                and leave your
-                laptop at the office. You won't want to go home. </p>
-            <img src="./assets/images/pool.jpg" alt="Pool">
-            <video width="400px" controls poster="./assets/images/sea_spa_logo.jpg">
-                <source src="./assets/media/t-4fdF1ikgJUxFaW56nULzxbEYLqNHb8QH.mp4" type="video/mp4">
-                Sorry, this video is unavailable on your browser
-            </video>
-
-        </main>
-
-        <footer>
-            Copyright © 2022 APU and EFREI Paris – Advanced Web Programming lab-work - created by: Jean DOUTRIAUX - All
-            rights
-            reserved </footer>
-
-    </div>
-</body>
+			<footer>
+				Copyright © 2022 APU and EFREI Paris – Advanced Web Programming
+				lab-work - created by: Jean DOUTRIAUX - All rights reserved
+			</footer>
+		</div>
+	</body>
+</html>
