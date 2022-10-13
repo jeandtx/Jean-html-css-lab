@@ -32,6 +32,7 @@ if (!$connexion) {
         <input type="text" name="surname" placeholder="Surname">
         <input type="text" name="age" placeholder="Age">
         <input type="text" name="sexe" placeholder="Sexe">
+        <input type="text" name="password" placeholder="Password">
 
         <input type="submit" name="submit" value="Register">
     </form>
@@ -41,8 +42,10 @@ if (!$connexion) {
         $surname = $_POST['surname'];
         $age = $_POST['age'];
         $sexe = $_POST['sexe'];
+        $password = md5($_POST['password']);
 
-        $query = "INSERT INTO student (name, surname, age, sexe) VALUES ('$name', '$surname', '$age', '$sexe')";
+        $query = "INSERT INTO student (name, surname, age, sexe, password) VALUES
+        ('$name', '$surname', '$age', '$sexe', '$password')";
         $result = mysqli_query($connexion, $query);
         if ($result) {
             echo "You have been registered";

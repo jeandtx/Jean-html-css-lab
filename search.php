@@ -41,8 +41,6 @@
         <br>
 
         <?php
-
-        echo "<br><br><br>";
         if (isset($_POST['submit'])) {
             $search = $_POST['search'];
             $selected = $_POST['Selected'];
@@ -63,6 +61,7 @@
             <th>Last name</th>
             <th>Age</th>
             <th>Sexe</th>
+            <th>Password</th>
             </tr>";
 
             $td = "<td>";
@@ -74,6 +73,7 @@
                 echo $td . $row['Surname'] . $etd;
                 echo $td . $row['Age'] . $etd;
                 echo $td . $row['Sexe'] . $etd;
+                echo $td . $row['Password'] . $etd;
                 echo "</tr>";
             }
         }
