@@ -30,7 +30,7 @@
             <input type="text" value="Search" name="search">
             <select name="Movies">
                 <option value="-" selected> - </option>
-                <option value="Name" selected> Name </option>
+                <option value="Name"> Name </option>
                 <option value="Surname"> Surname </option>
             </select>
             <br> <br> <input type="submit" name="submit" value="Search student">
@@ -41,14 +41,6 @@
         <br>
 
         <?php
-        if (isset($_POST['submit'])) {
-            if (!empty($_POST['Movies'])) {
-                $selected = $_POST['Movies'];
-                echo 'You have chosen: ' . $selected;
-            } else {
-                echo 'Please select the value.';
-            }
-        }
 
         echo "<br><br><br>";
 
@@ -56,7 +48,6 @@
 
         if ($selected == "Name") {
             $query = "SELECT * FROM student WHERE name LIKE '%$search%'";
-            echo $query;
         } elseif ($selected == "Surname") {
             $query = "SELECT * FROM student WHERE surname LIKE '%$search%'";
         } else {
@@ -85,7 +76,7 @@
             echo "</tr>";
         }
 
-
+        mysqli_close($connexion);
         ?>
     </div>
 </body>
