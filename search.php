@@ -28,7 +28,7 @@
         <h2> PHP Select Dropdown Example </h2>
         <form action="#" method="post">
             <input type="text" value="Search" name="search">
-            <select name="Movies">
+            <select name="Selected">
                 <option value="-" selected> - </option>
                 <option value="Name"> Name </option>
                 <option value="Surname"> Surname </option>
@@ -43,37 +43,39 @@
         <?php
 
         echo "<br><br><br>";
+        if (isset($_POST['submit'])) {
+            $search = $_POST['search'];
+            $selected = $_POST['Selected'];
 
-        $search = $_POST['search'];
-
-        if ($selected == "Name") {
-            $query = "SELECT * FROM student WHERE name LIKE '%$search%'";
-        } elseif ($selected == "Surname") {
-            $query = "SELECT * FROM student WHERE surname LIKE '%$search%'";
-        } else {
-            $query = "SELECT * FROM student";
-        }
+            if ($selected == "Name") {
+                $query = "SELECT * FROM student WHERE name LIKE '%$search%'";
+            } elseif ($selected == "Surname") {
+                $query = "SELECT * FROM student WHERE surname LIKE '%$search%'";
+            } else {
+                $query = "SELECT * FROM student";
+            }
 
 
-        $result = mysqli_query($connexion, $query);
-        echo "<table border='1'>
-        <tr>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Age</th>
-        <th>Sexe</th>
-        </tr>";
+            $result = mysqli_query($connexion, $query);
+            echo "<table border='1'>
+            <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Age</th>
+            <th>Sexe</th>
+            </tr>";
 
-        $td = "<td>";
-        $etd = "</td>";
+            $td = "<td>";
+            $etd = "</td>";
 
-        while ($row = mysqli_fetch_array($result)) {
-            echo "<tr>";
-            echo $td . $row['Name'] . $etd;
-            echo $td . $row['Surname'] . $etd;
-            echo $td . $row['Age'] . $etd;
-            echo $td . $row['Sexe'] . $etd;
-            echo "</tr>";
+            while ($row = mysqli_fetch_array($result)) {
+                echo "<tr>";
+                echo $td . $row['Name'] . $etd;
+                echo $td . $row['Surname'] . $etd;
+                echo $td . $row['Age'] . $etd;
+                echo $td . $row['Sexe'] . $etd;
+                echo "</tr>";
+            }
         }
 
         mysqli_close($connexion);
