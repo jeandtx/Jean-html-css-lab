@@ -50,7 +50,7 @@ if (!$connexion) {
         }
     }
     ?>
-
+    <a href="index.html">BAKHOME</a>
 </body>
 
 </html>
