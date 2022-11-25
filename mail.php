@@ -5,8 +5,6 @@ require 'includes/SMTP.php';
 require 'includes/Exception.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
 function sendEmail()
 {
